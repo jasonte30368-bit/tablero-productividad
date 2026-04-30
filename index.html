@@ -358,8 +358,8 @@ function validarTodo(){
 function mostrarError(errores){
   const el=document.getElementById('errValidacion');if(!el)return;
   if(errores.length===0){el.classList.remove('visible');el.innerHTML='';}
-  else{el.classList.add('visible');el.innerHTML=`<strong>Error en el registro:</strong><br>${errores.map(e=>`• ${e}`).join('<br>')}`);}
-}
+  else{el.classList.add('visible');el.innerHTML=`<strong>Error en el registro:</strong><br>${errores.map(e=>`• ${e}`).join('<br>')}`;}}
+
 function actualizarMeta(){
   const v=parseInt(document.getElementById('metaDiaria')?.value)||20;
   proyectos[proyActivo].meta=v;ls(SK.proyectos,proyectos);
